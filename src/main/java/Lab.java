@@ -1,4 +1,7 @@
+import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Queue;
 
 /**
@@ -36,7 +39,9 @@ public class Lab {
      * Stack behavior.
      */
     public Deque<String> createQueue(){
-        return null;
+        ArrayDeque<String> qd = new ArrayDeque<>();
+        
+             return qd;
     }
 
     /**
@@ -45,9 +50,10 @@ public class Lab {
      * @return the length of queue.
      */
     public int getSize(Queue<String> queue){
-        return 0;
+        //Deque<String> qd = new ArrayDeque<>();
+            return queue.size();
     }
-
+    
     /**
      * Add an item to the end of the queue - the queue will be able to return to that item once all the items
      * in front of it have been removed.
@@ -55,9 +61,9 @@ public class Lab {
      * @param item a String that should be added to Queue.
      */
     public void addToEndOfQueue(Queue<String> queue, String item){
-
+       
+            queue.add(item);
     }
-
     /**
      * Remove an item from a queue, and return the removed item.
      * (The method used to remove items from queues also returns the item.)
@@ -65,9 +71,9 @@ public class Lab {
      * @return the next String due to be removed (polled) from the Queue<String> (the oldest item in the queue.)
      */
     public String removeFromStartOfQueue(Queue<String> queue){
-        return "";
+               
+        return queue.poll();
     }
-
     /**
      * Return the next item from a queue which is due to be removed, but do not remove it. This is referred to as
      * a 'peek'.
@@ -75,6 +81,7 @@ public class Lab {
      * @return the next String due to be removed (peeked) from the Queue<String> (the oldest item in the queue.)
      */
     public String getStartOfQueueWithoutRemoving(Queue<String> queue){
-        return "";
+               
+        return queue.peek();
     }
 }
